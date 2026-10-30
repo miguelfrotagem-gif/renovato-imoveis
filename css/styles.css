@@ -426,7 +426,8 @@ button { font: inherit; color: inherit; }
 /* bloco 2: navegação e contato */
 .mmenu-nav { margin-top: 10px; padding: 11px; }
 .mmenu-list { margin: 0; padding: 0; list-style: none; }
-.menu-link {
+.menu-link,
+.menu-chame {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -448,6 +449,10 @@ button { font: inherit; color: inherit; }
 .menu-link:active { background: #f6f3ef; }
 /* vermelho mais escuro no texto do item ativo: contraste ≥ 4.5:1 sobre o rosado */
 .menu-link[aria-current] { background: #fdecec; color: #c8121a; }
+/* "Chame agora": abre o WhatsApp; vermelho para se distinguir das seções */
+.menu-chame { font-weight: 650; color: #c8121a; }
+.menu-chame:active { background: #fdecec; }
+.mmenu .menu-chame:focus-visible { outline-offset: -2px; border-radius: 20px; }
 .mmenu-cta {
   display: flex;
   align-items: center;
@@ -1489,6 +1494,21 @@ html.js [data-reveal].is-in { opacity: 1; translate: 0 0; }
     transition: transform var(--t-fast) var(--ease);
   }
   .nav-link:hover { color: #fff; }
+  /* "Chame agora" dentro da pílula do menu: abre o WhatsApp, em vermelho claro com o ícone */
+  .nav-chame {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-size: max(0.8125rem, calc(17 * var(--s)));
+    font-weight: 650;
+    white-space: nowrap;
+    text-decoration: none;
+    color: var(--red-text);
+    transition: color 0.25s;
+  }
+  .nav-chame .icon { width: 1.15em; height: 1.15em; }
+  .nav-chame:hover { color: #fff; }
+  .nav-chame:focus-visible { outline: 2px solid #fff; outline-offset: 6px; border-radius: 6px; }
   .nav-link:not([aria-current]):hover::after { transform: scaleX(1); }
   .nav-link[aria-current] { box-shadow: none; padding-left: 0; color: #fff; font-weight: 600; }
   .nav-link:focus-visible { outline: 2px solid #fff; outline-offset: 6px; border-radius: 6px; }
