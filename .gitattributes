@@ -1,0 +1,6 @@
+# quebras de linha LF em todos os sistemas (o build e os testes comparam arquivos exatos)
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.webp binary
+*.woff2 binary

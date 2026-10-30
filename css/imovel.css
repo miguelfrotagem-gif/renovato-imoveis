@@ -1,0 +1,154 @@
+/* Página de detalhes do imóvel — usa os tokens e fontes de styles.css */
+.det-page { background: var(--bg); }
+.det-wrap { width: 100%; max-width: 1180px; margin-inline: auto; padding-inline: var(--gutter); }
+
+.det-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(1, 23, 28, 0.92);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(244, 241, 234, 0.08);
+}
+.det-header-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; }
+.det-logo { display: block; border-radius: 4px; }
+.det-logo img { width: 84px; }
+.det-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgba(244, 241, 234, 0.4);
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--ink);
+  transition: background-color 0.25s, border-color 0.25s;
+}
+.det-back .icon { width: 18px; height: 18px; }
+.det-back:hover { background: rgba(244, 241, 234, 0.08); border-color: rgba(244, 241, 234, 0.8); }
+.det-back:focus-visible { border-radius: 999px; }
+
+main.det-wrap { padding-top: 28px; padding-bottom: 64px; }
+.det-estado { display: grid; justify-items: start; gap: 14px; padding: 48px 0 24px; }
+.det-estado-titulo { font-size: clamp(2rem, 8vw, 3rem); }
+.det-estado p { max-width: 36em; font-size: 1.0625rem; color: var(--ink-soft); }
+
+.det { display: grid; gap: 28px; animation: enter 0.5s var(--ease) both; }
+
+/* galeria: foto inteira (contain), deslizar no celular, setas e teclado */
+.galeria { min-width: 0; }
+.galeria-palco { position: relative; border-radius: var(--r-lg); overflow: hidden; background: #021a20; box-shadow: var(--shadow-1); }
+.galeria-trilha {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+.galeria-trilha::-webkit-scrollbar { display: none; }
+.galeria-trilha:focus-visible { outline: 2px solid #fff; outline-offset: -4px; border-radius: 18px; }
+/* quadro 4:3 fixo; a foto (vertical ou horizontal) aparece inteira dentro dele */
+.galeria-foto { position: relative; flex: 0 0 100%; margin: 0; aspect-ratio: 4 / 3; scroll-snap-align: start; }
+.galeria-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.galeria-seta {
+  position: absolute;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-top: -24px;
+  padding: 0;
+  border: 1px solid rgba(244, 241, 234, 0.35);
+  border-radius: 999px;
+  background: rgba(1, 23, 28, 0.72);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+.galeria-seta .icon { width: 24px; height: 24px; }
+.galeria-ant { left: 12px; }
+.galeria-prox { right: 12px; }
+.galeria-seta:hover { background: rgba(1, 23, 28, 0.92); }
+.galeria-seta:disabled { opacity: 0.35; cursor: default; }
+.galeria-seta:focus-visible { border-radius: 999px; }
+.galeria-barra { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px; margin-top: 10px; }
+.galeria-contador { font-size: 0.9375rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.galeria-original {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-size: 0.9375rem;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: rgba(240, 16, 26, 0.7);
+  text-underline-offset: 4px;
+}
+.galeria-original .icon { width: 18px; height: 18px; }
+.galeria-miniaturas { display: flex; gap: 8px; margin-top: 6px; overflow-x: auto; padding: 4px 2px 8px; }
+.galeria-mini {
+  flex: 0 0 auto;
+  width: 84px;
+  height: 63px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #021a20;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+.galeria-mini img { width: 100%; height: 100%; object-fit: cover; }
+.galeria-mini[aria-current] { border-color: var(--red); opacity: 1; }
+.galeria-mini:hover { opacity: 1; }
+.galeria-mini:focus-visible { outline: 2px solid #fff; outline-offset: 2px; border-radius: 10px; }
+
+.det-info { min-width: 0; }
+/* mesma linguagem dos cards: tipo em etiqueta, preço em sans com destaque */
+.det-tipo {
+  display: inline-block;
+  padding: 6px 12px;
+  border: var(--border-dark);
+  border-radius: var(--r-pill);
+  background: rgba(244, 241, 234, 0.08);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+}
+.det-titulo { margin-top: 10px; font-size: clamp(2rem, 7.4vw, 3rem); line-height: 1.05; text-wrap: balance; }
+.det-local { margin-top: 12px; font-size: 1.0625rem; color: var(--ink-soft); }
+.det-preco { margin-top: 16px; font-weight: 750; font-size: clamp(1.75rem, 6vw, 2.25rem); letter-spacing: -0.02em; color: var(--ink); font-variant-numeric: tabular-nums; }
+.det-preco.is-consulta { font-family: var(--sans); font-weight: 600; font-size: 1.25rem; color: var(--ink-soft); }
+.det-resumo { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; padding: 0; list-style: none; }
+.det-resumo li { padding: 8px 14px; border: 1px solid rgba(244, 241, 234, 0.18); border-radius: 999px; font-size: 0.9375rem; color: var(--ink); }
+.det-acoes { display: grid; gap: 12px; margin-top: 24px; }
+.det-acoes .btn { width: 100%; min-height: 56px; white-space: nowrap; }
+.det-bloco { margin-top: 34px; }
+.det-bloco h2 { font-family: var(--serif); font-weight: 700; font-size: 1.5rem; letter-spacing: -0.01em; }
+.det-bloco p { margin-top: 12px; font-size: 1.0625rem; line-height: 1.65; color: var(--ink-soft); }
+.det-lista { margin-top: 12px; padding-left: 1.2em; font-size: 1.0625rem; line-height: 1.6; color: var(--ink-soft); }
+.det-lista li::marker { color: var(--red-text); }
+.det-ref { margin-top: 30px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 0.9375rem; color: var(--muted); }
+
+.det-footer { border-top: 1px solid var(--line); padding: 24px 0 calc(28px + env(safe-area-inset-bottom)); font-size: 0.9375rem; color: var(--ink-soft); }
+.det-footer-row { display: grid; gap: 8px; }
+.det-footer strong { color: var(--ink); }
+.det-footer a { color: var(--ink); text-decoration: underline; text-decoration-color: rgba(240, 16, 26, 0.7); text-underline-offset: 4px; }
+.det-footer .email { overflow-wrap: anywhere; }
+
+@media (min-width: 900px) {
+  .det { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); align-items: start; gap: 44px; }
+  .galeria { position: sticky; top: 96px; }
+  .det-acoes { grid-template-columns: 1fr 1fr; }
+  .det-acoes .btn { padding-inline: 1em; font-size: 1rem; }
+}
+@media (max-width: 420px) {
+  .det-back { padding: 0 14px; }
+}

@@ -1,0 +1,41 @@
+{
+  "imoveis": [
+    {
+      "id": "casa-exemplo",
+      "referencia": "RI-000",
+      "publicado": false,
+      "titulo": "MODELO — copie este bloco para data/imoveis.json e troque todos os dados",
+      "tipo": "Casa",
+      "cidade": "Atibaia",
+      "bairro": "Nome do bairro",
+      "preco": 650000,
+      "areas": [
+        { "rotulo": "Área do terreno", "m2": 360 },
+        { "rotulo": "Área construída", "m2": 180 }
+      ],
+      "quartos": 3,
+      "banheiros": 2,
+      "vagas": 2,
+      "caracteristicas": ["Quintal", "Churrasqueira"],
+      "descricao": "Descrição do imóvel, com as informações confirmadas pelo proprietário.",
+      "fotos": [
+        { "arquivo": "assets/imoveis/casa-exemplo/01.webp", "alt": "Fachada da casa vista da rua" },
+        { "arquivo": "assets/imoveis/casa-exemplo/02.webp", "alt": "Sala com janelas para o quintal" }
+      ]
+    },
+    {
+      "id": "terreno-exemplo",
+      "referencia": "RI-001",
+      "publicado": false,
+      "titulo": "MODELO de terreno — sem quartos, banheiros e vagas; preço null = Valor sob consulta",
+      "tipo": "Terreno",
+      "cidade": "Atibaia",
+      "bairro": "Nome do bairro",
+      "preco": null,
+      "areas": [{ "rotulo": "Área do terreno", "m2": 450 }],
+      "caracteristicas": ["Documentação: descreva somente o que foi confirmado para este terreno"],
+      "descricao": "Descrição do terreno.",
+      "fotos": [{ "arquivo": "assets/imoveis/terreno-exemplo/01.webp", "alt": "Terreno plano com vista para a serra" }]
+    }
+  ]
+}

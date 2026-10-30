@@ -1,0 +1,10 @@
+# credenciais e vínculo local com a Vercel (nunca vão para o repositório)
+.vercel
+.env*
+
+# gerados localmente
+capturas/
+node_modules/
+
+# PDFs de referência (24 MB): as telas já extraídas ficam em referencias/
+originais/

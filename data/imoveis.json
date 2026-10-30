@@ -1,0 +1,42 @@
+{
+  "imoveis": [
+    {
+      "id": "terreno-braganca-jardim-bonanca",
+      "referencia": "",
+      "publicado": true,
+      "titulo": "Terreno em Bragança Paulista",
+      "tipo": "Terreno",
+      "cidade": "Bragança Paulista",
+      "bairro": "Jardim Bonança",
+      "preco": 270000,
+      "areas": [{ "rotulo": "Área do terreno", "m2": 264 }],
+      "caracteristicas": ["Zona Norte de Bragança Paulista"],
+      "descricao": "Excelente terreno de 264 m² à venda no Jardim Bonança, posicionado estrategicamente na Zona Norte de Bragança Paulista/SP. Uma oportunidade perfeita para investidores e construtores que buscam edificar o próprio comércio ou desenvolver um empreendimento focado em renda de locação.",
+      "fotos": [
+        { "origem": "materiais/terreno-01/foto-04.jpg", "arquivo": "assets/imoveis/terreno-braganca-jardim-bonanca/01.webp", "miniatura": "assets/imoveis/terreno-braganca-jardim-bonanca/01-mini.webp", "largura": 720, "altura": 1280, "foco": "50% 42%", "alt": "Terreno gramado com uma pequena placa de venda, rua e casas ao fundo sob céu azul" },
+        { "origem": "materiais/terreno-01/foto-02.jpg", "arquivo": "assets/imoveis/terreno-braganca-jardim-bonanca/02.webp", "miniatura": "assets/imoveis/terreno-braganca-jardim-bonanca/02-mini.webp", "largura": 720, "altura": 1280, "foco": "50% 34%", "alt": "Terreno gramado em primeiro plano, rua asfaltada, casa em construção e colinas ao fundo" },
+        { "origem": "materiais/terreno-01/foto-01.jpg", "arquivo": "assets/imoveis/terreno-braganca-jardim-bonanca/03.webp", "miniatura": "assets/imoveis/terreno-braganca-jardim-bonanca/03-mini.webp", "largura": 900, "altura": 1600, "foco": "50% 46%", "alt": "Vista do alto com gramado e palmeiras jovens, rua com ciclovia, casas e colinas ao fundo" },
+        { "origem": "materiais/terreno-01/foto-03.jpg", "arquivo": "assets/imoveis/terreno-braganca-jardim-bonanca/04.webp", "miniatura": "assets/imoveis/terreno-braganca-jardim-bonanca/04-mini.webp", "largura": 720, "altura": 1280, "foco": "50% 40%", "alt": "Placa do bairro Bonança com o aviso Área monitorada por câmeras, ruas e casas ao fundo" }
+      ]
+    },
+    {
+      "id": "terreno-joanopolis-jardim-sao-joao",
+      "referencia": "",
+      "publicado": true,
+      "titulo": "Terreno em Joanópolis/SP",
+      "tipo": "Terreno",
+      "cidade": "Joanópolis",
+      "bairro": "Jardim São João",
+      "preco": 170000,
+      "areas": [{ "rotulo": "Área total", "m2": 314 }],
+      "caracteristicas": ["Frente para duas ruas"],
+      "descricao": "Excelente oportunidade de investimento ou moradia em Joanópolis/SP: terreno com 314 m² de área total, localizado no tranquilo e valorizado bairro Jardim São João. O grande diferencial deste imóvel é a sua configuração exclusiva com frente para duas ruas, uma característica rara que oferece máxima versatilidade arquitetônica. Situado em uma região residencial calma e arborizada, o terreno é ideal para quem busca construir a casa dos sonhos ou um imóvel para locação, aproveitando toda a qualidade de vida e o contato com a natureza que a charmosa cidade de Joanópolis oferece, sem abrir mão da proximidade com o comércio local.",
+      "fotos": [
+        { "origem": "materiais/terreno-02/foto-01.jpg", "arquivo": "assets/imoveis/terreno-joanopolis-jardim-sao-joao/01.webp", "miniatura": "assets/imoveis/terreno-joanopolis-jardim-sao-joao/01-mini.webp", "largura": 720, "altura": 1280, "foco": "50% 52%", "alt": "Portões vermelhos abertos sobre piso de bloquetes, caminho de terra entre árvores e vista da cidade e dos morros" },
+        { "origem": "materiais/terreno-02/foto-02.jpg", "arquivo": "assets/imoveis/terreno-joanopolis-jardim-sao-joao/02.webp", "miniatura": "assets/imoveis/terreno-joanopolis-jardim-sao-joao/02-mini.webp", "largura": 720, "altura": 1280, "foco": "50% 46%", "alt": "Caminho de terra entre vegetação e um muro branco, com casas e morros ao fundo" },
+        { "origem": "materiais/terreno-02/foto-03.jpg", "arquivo": "assets/imoveis/terreno-joanopolis-jardim-sao-joao/03.webp", "miniatura": "assets/imoveis/terreno-joanopolis-jardim-sao-joao/03-mini.webp", "largura": 720, "altura": 1280, "foco": "50% 62%", "alt": "Muro de blocos junto à rua asfaltada, com barranco e árvores acima" },
+        { "origem": "materiais/terreno-02/foto-04.jpg", "arquivo": "assets/imoveis/terreno-joanopolis-jardim-sao-joao/04.webp", "miniatura": "assets/imoveis/terreno-joanopolis-jardim-sao-joao/04-mini.webp", "largura": 720, "altura": 1280, "foco": "50% 48%", "alt": "Letreiro #EU ❤ JOANÓPOLIS em um gramado da cidade, diante de uma construção de tijolos" }
+      ]
+    }
+  ]
+}

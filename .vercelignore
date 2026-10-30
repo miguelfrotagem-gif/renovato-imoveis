@@ -1,0 +1,14 @@
+# publica só o site estático (index.html, politica-de-privacidade/, css/, js/, assets/, vercel.json)
+originais
+referencias
+capturas
+tests
+tools
+node_modules
+package.json
+package-lock.json
+server.mjs
+README.md
+data/imoveis.exemplo.json
+.env*
+materiais

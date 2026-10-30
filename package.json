@@ -1,0 +1,18 @@
+{
+  "name": "renovato-imoveis",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Landing page de terrenos · Renovato Imóveis",
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "start": "node server.mjs",
+    "test": "node --test tests/",
+    "verify": "node tools/verify.mjs",
+    "images": "python tools/make_images.py",
+    "fotos": "python tools/fotos_imoveis.py"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
